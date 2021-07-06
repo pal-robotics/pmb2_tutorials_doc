@@ -3,11 +3,11 @@
 
 ## Purpose
 
-This tutorial shows how to make PMB-2 navigate autonomously provided a map build up of laser scans and taking into account the laser and the RGBD camera in order to avoid obstacles.
+This tutorial shows how to make PMB-2 navigate and create a map using the navigation from ros2. You can find further information about that in the [nav2 SLAM tutorial](https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html).
 
 ## Pre-Requisites
 
-First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation) Section. Then follow the instructions in the  [nav2 SLAM tutorial](https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html) in order to create and save a map.
+First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation) Section.
 
 ## Execution
 
@@ -31,6 +31,8 @@ In the second console launch the keyboard teleoperation node
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
 ```
 
+You can use the keyboard to navigate the robot and create the map.
+
 ![teleop ros2](media/key_teleop.png)
 
 As shown in the [nav2 SLAM tutorial](https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html) you can save the map by doing:
@@ -38,3 +40,8 @@ As shown in the [nav2 SLAM tutorial](https://navigation.ros.org/tutorials/docs/n
 ```
 ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
+
+
+## Next steps
+
+Once you created the map you can start navigating autonomously following the next tutorial [PMB2 navigation](https://cesc-folch.github.io/pmb2-tutorial/navigation).
