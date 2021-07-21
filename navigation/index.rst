@@ -1,3 +1,5 @@
+.. _navigation:
+
 ******************************
 PMB-2 Navigation tutorial ROS2
 ******************************
@@ -17,14 +19,17 @@ Execution
 #########
 
 First of all open two consoles and source PMB-2's public simulation workspace in each one
-```
-cd ~/pmb2_public_ws
-source ./install/setup.bash
-```
+
+.. code:: bash
+
+   cd ~/pmb2_public_ws
+   source ./install/setup.bash
+
 In the first console launch the following simulation
-```
-ros2 launch pmb2_2dnav_gazebo pmb2_navigation_gazebo.launch.py
-```
+
+.. code:: bash
+
+   ros2 launch pmb2_2dnav_gazebo pmb2_navigation_gazebo.launch.py
 
 This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the `2D Pose Estimate` mode and set the approximate robot position on the map.
@@ -37,9 +42,10 @@ Select on the rviz window the `2D Pose Estimate` mode and set the approximate ro
     :alt: gazebo
 
 In the second console launch the keyboard teleoperation node
-```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
-```
+
+.. code:: bash
+
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
 
 .. image:: media/key_teleop.png
     :alt: teleop ros2
