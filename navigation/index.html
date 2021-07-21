@@ -42,7 +42,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../mapping/index.html" /> 
+    <link rel="prev" title="PMB-2 Mapping tutorial ROS2" href="../mapping/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,10 +90,10 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul class="simple">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../mapping/index.html">PMB-2 Mapping tutorial ROS2</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -178,18 +178,18 @@ In the first console launch the following simulation
 <span class="pre">`</span></code></p>
 <p>This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the approximate robot position on the map.</p>
-<p>![rviz pose](media/pose_estimate.png)</p>
+<img alt="rviz pose" src="../_images/pose_estimate.png" />
 <p>![gazebo](media/gazebo_nav.png)</p>
 <p>In the second console launch the keyboard teleoperation node
 <code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">--ros-args</span> <span class="pre">--remap</span> <span class="pre">cmd_vel:=key_vel</span>
 <span class="pre">`</span></code></p>
-<p>![teleop ros2](media/key_teleop.png)</p>
+<img alt="teleop ros2" src="../_images/key_teleop1.png" />
 <p>Now you can navigate the robot to correct the position error.</p>
 <p>To send a navigation goal you can use the rviz <cite>Navigation2 Goal</cite> mode and select the desired goal.</p>
-<p>![gazebo goal](media/goal.png)</p>
+<img alt="gazebo goal" src="../_images/goal.png" />
 <p>After selecting the goal you can see the global path planned and the local path.</p>
-<p>![navigation rviz](media/navigation.png)</p>
+<img alt="navigation rviz" src="../_images/navigation.png" />
 
 
            </div>
@@ -197,7 +197,7 @@ Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the app
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../mapping/index.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../mapping/index.html" class="btn btn-neutral float-left" title="PMB-2 Mapping tutorial ROS2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

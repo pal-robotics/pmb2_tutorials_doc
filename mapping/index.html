@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>&lt;no title&gt; &mdash; control.ros.org  documentation</title>
+  <title>PMB-2 Mapping tutorial ROS2 &mdash; control.ros.org  documentation</title>
   
 
   
@@ -91,10 +91,14 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul class="simple">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PMB-2 Mapping tutorial ROS2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-Requisites</a></li>
 </ul>
-</div>
+</li>
+</ul>
+
             
           
         </div>
@@ -141,7 +145,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>PMB-2 Mapping tutorial ROS2</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -162,10 +166,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># PMB-2 Mapping tutorial ROS2</p>
-<p>## Purpose</p>
+  <div class="section" id="pmb-2-mapping-tutorial-ros2">
+<h1>PMB-2 Mapping tutorial ROS2<a class="headerlink" href="#pmb-2-mapping-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial shows how to make PMB-2 navigate and create a map using the navigation from ros2. You can find further information about that in the [nav2 SLAM tutorial](<a class="reference external" href="https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html">https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html</a>).</p>
-<p>## Pre-Requisites</p>
+</div>
+<div class="section" id="pre-requisites">
+<h2>Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
 <p>First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](<a class="reference external" href="http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation">http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation</a>) Section.</p>
 <p>## Execution</p>
 <p>First of all open two consoles and source PMB-2’s public simulation workspace in each one
@@ -177,21 +185,28 @@ In the first console launch the following simulation
 <code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">ros2</span> <span class="pre">launch</span> <span class="pre">pmb2_2dnav_gazebo</span> <span class="pre">pmb2_mapping_gazebo.launch.py</span>
 <span class="pre">`</span></code>
-![gazebo mapping](media/gazebo.png)</p>
+.. image:: media/gazebo.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>gazebo mapping</p>
+</dd>
+</dl>
+</div></blockquote>
 <p>Note that a rviz will also show up in order to visualize the mapping process.</p>
-<p>![rviz mapping](media/rviz_map.png)</p>
+<img alt="rviz mapping" src="../_images/rviz_map.png" />
 <p>In the second console launch the keyboard teleoperation node
 <code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">--ros-args</span> <span class="pre">--remap</span> <span class="pre">cmd_vel:=key_vel</span>
 <span class="pre">`</span></code></p>
 <p>You can use the keyboard to navigate the robot and create the map.</p>
-<p>![teleop ros2](media/key_teleop.png)</p>
+<img alt="teleop ros2" src="../_images/key_teleop.png" />
 <p>As shown in the [nav2 SLAM tutorial](<a class="reference external" href="https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html">https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html</a>) you can save the map by doing:</p>
 <p><code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">nav2_map_server</span> <span class="pre">map_saver_cli</span> <span class="pre">-f</span> <span class="pre">~/map</span>
 <span class="pre">`</span></code></p>
-<p>## Next steps</p>
-<p>Once you created the map you can start navigating autonomously following the next tutorial [PMB2 navigation](<a class="reference external" href="https://cesc-folch.github.io/pmb2-tutorial/navigation">https://cesc-folch.github.io/pmb2-tutorial/navigation</a>).</p>
+</div>
+</div>
 
 
            </div>

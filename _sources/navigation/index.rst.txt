@@ -24,7 +24,8 @@ ros2 launch pmb2_2dnav_gazebo pmb2_navigation_gazebo.launch.py
 This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the `2D Pose Estimate` mode and set the approximate robot position on the map.
 
-![rviz pose](media/pose_estimate.png)
+.. image:: media/pose_estimate.png
+    :alt: rviz pose
 
 ![gazebo](media/gazebo_nav.png)
 
@@ -33,14 +34,17 @@ In the second console launch the keyboard teleoperation node
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
 ```
 
-![teleop ros2](media/key_teleop.png)
+.. image:: media/key_teleop.png
+    :alt: teleop ros2
 
 Now you can navigate the robot to correct the position error.
 
 To send a navigation goal you can use the rviz `Navigation2 Goal` mode and select the desired goal.
 
-![gazebo goal](media/goal.png)
+.. image:: media/goal.png
+    :alt: gazebo goal
 
 After selecting the goal you can see the global path planned and the local path.
 
-![navigation rviz](media/navigation.png)
+.. image:: media/navigation.png
+    :alt: navigation rviz
