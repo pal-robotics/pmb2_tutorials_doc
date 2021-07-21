@@ -13,7 +13,7 @@ This tutorial shows how to make PMB-2 navigate autonomously provided a map build
 Pre-Requisites
 ##############
 
-First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation) Section. Then follow the instructions in the  [PMB2 mapping tutorial](https://cesc-folch.github.io/pmb2-tutorial/mapping) in order to create and save a map.
+First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the tutorials `installation`_ section. Then follow the instructions in the `PMB2_mapping`_ tutorial in order to create and save a map.
 
 Execution
 #########
@@ -60,3 +60,6 @@ After selecting the goal you can see the global path planned and the local path.
 
 .. image:: media/navigation.png
     :alt: navigation rviz
+
+.. _installation: http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation
+.. _PMB2_mapping: https://cesc-folch.github.io/pmb2-tutorial/mapping
