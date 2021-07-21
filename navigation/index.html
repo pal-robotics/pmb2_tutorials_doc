@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>&lt;no title&gt; &mdash; control.ros.org  documentation</title>
+  <title>PMB-2 Navigation tutorial ROS2 &mdash; control.ros.org  documentation</title>
   
 
   
@@ -90,8 +90,14 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../mapping/index.html">PMB-2 Mapping tutorial ROS2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PMB-2 Navigation tutorial ROS2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-Requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execution">Execution</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -140,7 +146,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+      <li>PMB-2 Navigation tutorial ROS2</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -161,12 +167,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p># PMB-2 Navigation tutorial ROS2</p>
-<p>## Purpose</p>
+  <div class="section" id="pmb-2-navigation-tutorial-ros2">
+<h1>PMB-2 Navigation tutorial ROS2<a class="headerlink" href="#pmb-2-navigation-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial shows how to make PMB-2 navigate autonomously provided a map build up of laser scans and taking into account the laser and the RGBD camera in order to avoid obstacles.</p>
-<p>## Pre-Requisites</p>
+</div>
+<div class="section" id="pre-requisites">
+<h2>Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
 <p>First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](<a class="reference external" href="http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation">http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation</a>) Section. Then follow the instructions in the  [PMB2 mapping tutorial](<a class="reference external" href="https://cesc-folch.github.io/pmb2-tutorial/mapping">https://cesc-folch.github.io/pmb2-tutorial/mapping</a>) in order to create and save a map.</p>
-<p>## Execution</p>
+</div>
+<div class="section" id="execution">
+<h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
 <p>First of all open two consoles and source PMB-2’s public simulation workspace in each one
 <code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">cd</span> <span class="pre">~/pmb2_public_ws</span>
@@ -179,7 +191,15 @@ In the first console launch the following simulation
 <p>This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the approximate robot position on the map.</p>
 <img alt="rviz pose" src="../_images/pose_estimate.png" />
-<p>![gazebo](media/gazebo_nav.png)</p>
+<p>![gazebo](media/gazebo_nav.png)
+.. image:: media/gazebo_nav.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">alt</dt>
+<dd class="field-odd"><p>gazebo</p>
+</dd>
+</dl>
+</div></blockquote>
 <p>In the second console launch the keyboard teleoperation node
 <code class="docutils literal notranslate"><span class="pre">`</span>
 <span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">--ros-args</span> <span class="pre">--remap</span> <span class="pre">cmd_vel:=key_vel</span>
@@ -190,6 +210,8 @@ Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the app
 <img alt="gazebo goal" src="../_images/goal.png" />
 <p>After selecting the goal you can see the global path planned and the local path.</p>
 <img alt="navigation rviz" src="../_images/navigation.png" />
+</div>
+</div>
 
 
            </div>
