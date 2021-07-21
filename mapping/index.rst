@@ -13,7 +13,8 @@ Pre-Requisites
 
 First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation) Section.
 
-## Execution
+Execution
+#########
 
 First of all open two consoles and source PMB-2's public simulation workspace in each one
 ```

@@ -1,15 +1,20 @@
-# PMB-2 Navigation tutorial ROS2
+******************************
+PMB-2 Navigation tutorial ROS2
+******************************
 
 
-## Purpose
+Purpose
+#######
 
 This tutorial shows how to make PMB-2 navigate autonomously provided a map build up of laser scans and taking into account the laser and the RGBD camera in order to avoid obstacles.
 
-## Pre-Requisites
+Pre-Requisites
+##############
 
 First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the [Tutorials Installation](http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation) Section. Then follow the instructions in the  [PMB2 mapping tutorial](https://cesc-folch.github.io/pmb2-tutorial/mapping) in order to create and save a map.
 
-## Execution
+Execution
+#########
 
 First of all open two consoles and source PMB-2's public simulation workspace in each one
 ```
@@ -28,6 +33,8 @@ Select on the rviz window the `2D Pose Estimate` mode and set the approximate ro
     :alt: rviz pose
 
 ![gazebo](media/gazebo_nav.png)
+.. image:: media/gazebo_nav.png
+    :alt: gazebo
 
 In the second console launch the keyboard teleoperation node
 ```
