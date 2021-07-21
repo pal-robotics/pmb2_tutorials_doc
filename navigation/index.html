@@ -191,15 +191,7 @@
 <p>This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the approximate robot position on the map.</p>
 <img alt="rviz pose" src="../_images/pose_estimate.png" />
-<p>![gazebo](media/gazebo_nav.png)
-.. image:: media/gazebo_nav.png</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">alt</dt>
-<dd class="field-odd"><p>gazebo</p>
-</dd>
-</dl>
-</div></blockquote>
+<img alt="gazebo" src="../_images/gazebo_nav.png" />
 <p>In the second console launch the keyboard teleoperation node</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:<span class="o">=</span>key_vel
 </pre></div>

@@ -37,7 +37,6 @@ Select on the rviz window the `2D Pose Estimate` mode and set the approximate ro
 .. image:: media/pose_estimate.png
     :alt: rviz pose
 
-![gazebo](media/gazebo_nav.png)
 .. image:: media/gazebo_nav.png
     :alt: gazebo
 
