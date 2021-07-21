@@ -1,0 +1,12 @@
+name: "Pull Request Docs Check"
+on:
+  pull_request:
+
+
+jobs:
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: seanzhengw/sphinx-pages@master
+      with:
+        install_extensions: false
