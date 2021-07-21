@@ -1,3 +1,5 @@
+.. _mapping:
+
 ***************************
 PMB-2 Mapping tutorial ROS2
 ***************************
@@ -17,14 +19,19 @@ Execution
 #########
 
 First of all open two consoles and source PMB-2's public simulation workspace in each one
-```
-cd ~/pmb2_public_ws
-source ./install/setup.bash
-```
+
+.. code:: bash
+
+   cd ~/pmb2_public_ws
+   source ./install/setup.bash
+
+
 In the first console launch the following simulation
-```
-ros2 launch pmb2_2dnav_gazebo pmb2_mapping_gazebo.launch.py
-```
+
+.. code:: bash
+
+   ros2 launch pmb2_2dnav_gazebo pmb2_mapping_gazebo.launch.py
+
 .. image:: media/gazebo.png
     :alt: gazebo mapping
 
@@ -34,9 +41,10 @@ Note that a rviz will also show up in order to visualize the mapping process.
     :alt: rviz mapping
 
 In the second console launch the keyboard teleoperation node
-```
-ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
-```
+
+.. code:: bash
+
+   ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=key_vel
 
 You can use the keyboard to navigate the robot and create the map.
 
@@ -45,6 +53,5 @@ You can use the keyboard to navigate the robot and create the map.
 
 As shown in the [nav2 SLAM tutorial](https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html) you can save the map by doing:
 
-```
-ros2 run nav2_map_server map_saver_cli -f ~/map
-```
+.. code:: bash
+   ros2 run nav2_map_server map_saver_cli -f ~/map

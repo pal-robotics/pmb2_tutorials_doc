@@ -168,7 +168,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="pmb-2-navigation-tutorial-ros2">
-<h1>PMB-2 Navigation tutorial ROS2<a class="headerlink" href="#pmb-2-navigation-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
+<span id="navigation"></span><h1>PMB-2 Navigation tutorial ROS2<a class="headerlink" href="#pmb-2-navigation-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial shows how to make PMB-2 navigate autonomously provided a map build up of laser scans and taking into account the laser and the RGBD camera in order to avoid obstacles.</p>
@@ -179,15 +179,15 @@
 </div>
 <div class="section" id="execution">
 <h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
-<p>First of all open two consoles and source PMB-2’s public simulation workspace in each one
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">cd</span> <span class="pre">~/pmb2_public_ws</span>
-<span class="pre">source</span> <span class="pre">./install/setup.bash</span>
-<span class="pre">`</span></code>
-In the first console launch the following simulation
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ros2</span> <span class="pre">launch</span> <span class="pre">pmb2_2dnav_gazebo</span> <span class="pre">pmb2_navigation_gazebo.launch.py</span>
-<span class="pre">`</span></code></p>
+<p>First of all open two consoles and source PMB-2’s public simulation workspace in each one</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/pmb2_public_ws
+<span class="nb">source</span> ./install/setup.bash
+</pre></div>
+</div>
+<p>In the first console launch the following simulation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch pmb2_2dnav_gazebo pmb2_navigation_gazebo.launch.py
+</pre></div>
+</div>
 <p>This will launch a gazebo window and a rviz window with a map.
 Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the approximate robot position on the map.</p>
 <img alt="rviz pose" src="../_images/pose_estimate.png" />
@@ -200,10 +200,10 @@ Select on the rviz window the <cite>2D Pose Estimate</cite> mode and set the app
 </dd>
 </dl>
 </div></blockquote>
-<p>In the second console launch the keyboard teleoperation node
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">--ros-args</span> <span class="pre">--remap</span> <span class="pre">cmd_vel:=key_vel</span>
-<span class="pre">`</span></code></p>
+<p>In the second console launch the keyboard teleoperation node</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:<span class="o">=</span>key_vel
+</pre></div>
+</div>
 <img alt="teleop ros2" src="../_images/key_teleop1.png" />
 <p>Now you can navigate the robot to correct the position error.</p>
 <p>To send a navigation goal you can use the rviz <cite>Navigation2 Goal</cite> mode and select the desired goal.</p>

@@ -169,7 +169,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="pmb-2-mapping-tutorial-ros2">
-<h1>PMB-2 Mapping tutorial ROS2<a class="headerlink" href="#pmb-2-mapping-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
+<span id="mapping"></span><h1>PMB-2 Mapping tutorial ROS2<a class="headerlink" href="#pmb-2-mapping-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial shows how to make PMB-2 navigate and create a map using the navigation from ros2. You can find further information about that in the [nav2 SLAM tutorial](<a class="reference external" href="https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html">https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html</a>).</p>
@@ -180,35 +180,25 @@
 </div>
 <div class="section" id="execution">
 <h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
-<p>First of all open two consoles and source PMB-2’s public simulation workspace in each one
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">cd</span> <span class="pre">~/pmb2_public_ws</span>
-<span class="pre">source</span> <span class="pre">./install/setup.bash</span>
-<span class="pre">`</span></code>
-In the first console launch the following simulation
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ros2</span> <span class="pre">launch</span> <span class="pre">pmb2_2dnav_gazebo</span> <span class="pre">pmb2_mapping_gazebo.launch.py</span>
-<span class="pre">`</span></code>
-.. image:: media/gazebo.png</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">alt</dt>
-<dd class="field-odd"><p>gazebo mapping</p>
-</dd>
-</dl>
-</div></blockquote>
+<p>First of all open two consoles and source PMB-2’s public simulation workspace in each one</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/pmb2_public_ws
+<span class="nb">source</span> ./install/setup.bash
+</pre></div>
+</div>
+<p>In the first console launch the following simulation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch pmb2_2dnav_gazebo pmb2_mapping_gazebo.launch.py
+</pre></div>
+</div>
+<img alt="gazebo mapping" src="../_images/gazebo.png" />
 <p>Note that a rviz will also show up in order to visualize the mapping process.</p>
 <img alt="rviz mapping" src="../_images/rviz_map.png" />
-<p>In the second console launch the keyboard teleoperation node
-<code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">--ros-args</span> <span class="pre">--remap</span> <span class="pre">cmd_vel:=key_vel</span>
-<span class="pre">`</span></code></p>
+<p>In the second console launch the keyboard teleoperation node</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:<span class="o">=</span>key_vel
+</pre></div>
+</div>
 <p>You can use the keyboard to navigate the robot and create the map.</p>
 <img alt="teleop ros2" src="../_images/key_teleop.png" />
 <p>As shown in the [nav2 SLAM tutorial](<a class="reference external" href="https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html">https://navigation.ros.org/tutorials/docs/navigation2_with_slam.html</a>) you can save the map by doing:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ros2</span> <span class="pre">run</span> <span class="pre">nav2_map_server</span> <span class="pre">map_saver_cli</span> <span class="pre">-f</span> <span class="pre">~/map</span>
-<span class="pre">`</span></code></p>
 </div>
 </div>
 
