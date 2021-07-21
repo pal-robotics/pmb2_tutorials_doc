@@ -21,9 +21,9 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'control.ros.org'
-copyright = '2021, ros2_control Maintainers'
-author = 'ros2_control Maintainers'
+project = 'PMB2 ROS2 tutorials'
+copyright = '2021, PAL Robotics'
+author = 'PAL Robotics'
 
 # The short X.Y version
 version = ''
@@ -113,10 +113,10 @@ html_context = {
     "source_suffix": source_suffix,
     "css_files": ['_static/override.css'],
     "favicon": "favicon_ros-controls.ico",
-    "logo": "logo_ros-controls.png"
+    "logo": "palroboticslogo.png"
 }
 
-html_logo = "images/logo_ros-controls.png"
+html_logo = "images/palroboticslogo.png"
 logo_only = True
 html_favicon = "images/favicon_ros-controls.ico"
 
@@ -125,7 +125,7 @@ github_url = "https://github.com/cesc-folch/pmb2-tutorial"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ros2ControlDocumentation'
+htmlhelp_basename = 'pmb2ros2tutorial'
 
 
 # -- Extension configuration -------------------------------------------------
