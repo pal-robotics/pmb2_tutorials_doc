@@ -106,8 +106,8 @@ html_static_path = ['_static']
 
 html_context = {
     "display_github": True,
-    "github_user": "ros-controls",
-    "github_repo": "control.ros.org",
+    "github_user": "cesc-folch",
+    "github_repo": "pmb2-tutorial",
     "github_version": "main",
     "conf_py_path": "/",
     "source_suffix": source_suffix,
@@ -120,7 +120,7 @@ html_logo = "images/logo_ros-controls.png"
 logo_only = True
 html_favicon = "images/favicon_ros-controls.ico"
 
-github_url = "https://github.com/ros-controls/control.ros.org"
+github_url = "https://github.com/cesc-folch/pmb2-tutorial"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
