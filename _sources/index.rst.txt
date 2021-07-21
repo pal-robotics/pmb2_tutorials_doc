@@ -20,8 +20,8 @@ Overview
 =========
 The ros2_control framework consists of the following Github repositories:
 
-* `ros2_control`_ - the main interfaces and components of the framework;
-* `ros2_controllers`_ - widely used controllers, such as forward command controller, joint trajectory controller, differential drive controller;
+* `mapping`_ - the main interfaces and components of the framework;
+* `navigation`_ - widely used controllers, such as forward command controller, joint trajectory controller, differential drive controller;
 * `control_toolbox`_ - some widely-used control theory implementations (e.g. PID) used by controllers;
 * `realtime_tools`_ - general toolkit for realtime support, e.g., realtime buffers and publishers;
 * `control_msgs`_ - common messages.
