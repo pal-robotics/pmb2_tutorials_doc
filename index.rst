@@ -10,6 +10,8 @@ Welcome to the PMB2 ROS2 tutorials!
    mapping/index.rst
    navigation/index.rst
 
+Welcome to the tutorials that will guide you through installation and simulation of navigation and mapping with a PMB-2 robot.
+
 You can find the official mapping and the navigation `tutorials`_.
 
 .. _tutorials: https://https://navigation.ros.org
