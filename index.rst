@@ -6,13 +6,13 @@ Welcome to the PMB2 ROS2 tutorials!
 .. toctree::
    :hidden:
 
+   installation/index.rst
    mapping/index.rst
    navigation/index.rst
 
-You can find the `mapping`_ and the `navigation`_ tutorials.
+You can find the official mapping and the navigation `tutorials`_.
 
-.. _mapping: https://github.com/ros-controls/ros2_control
-.. _navigation: https://github.com/ros-controls/ros2_controllers
+.. _tutorials: https://https://navigation.ros.org
 
 
 ----
