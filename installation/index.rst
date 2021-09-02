@@ -13,7 +13,7 @@ This tutorial shows how to install all the packages you need to simulate PMB-2 n
 Installation
 ############
 
-Install all the ros offical packages for pmb2.
+Install all the ros official packages for pmb2.
 
 .. code:: bash
 
