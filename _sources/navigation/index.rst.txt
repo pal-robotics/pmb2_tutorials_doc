@@ -18,12 +18,11 @@ First make sure that the tutorials are properly installed along with the PMB-2 s
 Execution
 #########
 
-First of all open two consoles and source PMB-2's public simulation workspace in each one
+First of all open two consoles and source ros setup
 
 .. code:: bash
 
-   cd ~/pmb2_public_ws
-   source ./install/setup.bash
+   source /opt/ros/foxy/setup.bash
 
 In the first console launch the following simulation
 

@@ -1,3 +1,3 @@
 GitHub Pages of [pal-robotics/pmb2_tutorials_doc](https://github.com/pal-robotics/pmb2_tutorials_doc.git)
 ===
-Sphinx html documentation of [1b60fd4b](https://github.com/pal-robotics/pmb2_tutorials_doc/tree/1b60fd4b43adf7bdbaa53f43ea537a823e119cf9)
+Sphinx html documentation of [1b0ed1df](https://github.com/pal-robotics/pmb2_tutorials_doc/tree/1b0ed1df1dc765f88cfaceb7a8e24a026f893924)

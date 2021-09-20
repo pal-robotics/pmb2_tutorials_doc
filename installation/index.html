@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>PMB-2 Navigation tutorial ROS2 &mdash; PMB2 ROS2 tutorials  documentation</title>
+  <title>PMB-2 Installation tutorial ROS2 &mdash; PMB2 ROS2 tutorials  documentation</title>
   
 
   
@@ -43,7 +43,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="PMB-2 Mapping tutorial ROS2" href="../mapping/index.html" /> 
+    <link rel="next" title="PMB-2 Mapping tutorial ROS2" href="../mapping/index.html" />
+    <link rel="prev" title="Welcome to the PMB2 ROS2 tutorials!" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,14 +93,13 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">PMB-2 Installation tutorial ROS2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mapping/index.html">PMB-2 Mapping tutorial ROS2</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PMB-2 Navigation tutorial ROS2</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PMB-2 Installation tutorial ROS2</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-Requisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#execution">Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../mapping/index.html">PMB-2 Mapping tutorial ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigation/index.html">PMB-2 Navigation tutorial ROS2</a></li>
 </ul>
 
             
@@ -148,14 +148,14 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>PMB-2 Navigation tutorial ROS2</li>
+      <li>PMB-2 Installation tutorial ROS2</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/cesc-folch/pmb2-tutorial/blob/main/navigation/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/cesc-folch/pmb2-tutorial/blob/main/installation/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -169,40 +169,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="pmb-2-navigation-tutorial-ros2">
-<span id="navigation"></span><h1>PMB-2 Navigation tutorial ROS2<a class="headerlink" href="#pmb-2-navigation-tutorial-ros2" title="Permalink to this headline"></a></h1>
+  <section id="pmb-2-installation-tutorial-ros2">
+<span id="installation"></span><h1>PMB-2 Installation tutorial ROS2<a class="headerlink" href="#pmb-2-installation-tutorial-ros2" title="Permalink to this headline"></a></h1>
 <section id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline"></a></h2>
-<p>This tutorial shows how to make PMB-2 navigate autonomously provided a map build up of laser scans and taking into account the laser and the RGBD camera in order to avoid obstacles.</p>
+<p>This tutorial shows how to install all the packages you need to simulate PMB-2 navigation and mapping.</p>
 </section>
-<section id="pre-requisites">
-<h2>Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline"></a></h2>
-<p>First make sure that the tutorials are properly installed along with the PMB-2 simulation, as shown in the tutorials <a class="reference external" href="http://wiki.ros.org/Robots/PMB-2/Tutorials#Tutorials_Installation">installation</a> section. Then follow the instructions in the <a class="reference external" href="https://cesc-folch.github.io/pmb2-tutorial/mapping">PMB2_mapping</a> tutorial in order to create and save a map.</p>
-</section>
-<section id="execution">
-<h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline"></a></h2>
-<p>First of all open two consoles and source ros setup</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> /opt/ros/foxy/setup.bash
+<section id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p>Install all the ros official packages for pmb2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt install ros-foxy-pmb2*
+sudo apt install ros-foxy-pal-gazebo-worlds
 </pre></div>
 </div>
-<p>In the first console launch the following simulation</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch pmb2_2dnav_gazebo pmb2_navigation_gazebo.launch.py
-</pre></div>
-</div>
-<p>This will launch a gazebo window and a rviz window with a map.
-Select on the rviz window the <code class="docutils literal notranslate"><span class="pre">2D</span> <span class="pre">Pose</span> <span class="pre">Estimate</span></code> mode and set the approximate robot position on the map.</p>
-<img alt="rviz pose" src="../_images/pose_estimate.png" />
-<img alt="gazebo" src="../_images/gazebo_nav.png" />
-<p>In the second console launch the keyboard teleoperation node</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:<span class="o">=</span>key_vel
-</pre></div>
-</div>
-<img alt="teleop ros2" src="../_images/key_teleop1.png" />
-<p>Now you can navigate the robot to correct the position error.</p>
-<p>To send a navigation goal you can use the rviz <code class="docutils literal notranslate"><span class="pre">Navigation2</span> <span class="pre">Goal</span></code> mode and select the desired goal.</p>
-<img alt="gazebo goal" src="../_images/goal.png" />
-<p>After selecting the goal you can see the global path planned and the local path.</p>
-<img alt="navigation rviz" src="../_images/navigation.png" />
 </section>
 </section>
 
@@ -212,7 +192,8 @@ Select on the rviz window the <code class="docutils literal notranslate"><span c
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../mapping/index.html" class="btn btn-neutral float-left" title="PMB-2 Mapping tutorial ROS2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../mapping/index.html" class="btn btn-neutral float-right" title="PMB-2 Mapping tutorial ROS2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the PMB2 ROS2 tutorials!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
